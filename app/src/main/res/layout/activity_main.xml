@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/fon_bacg"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/montreal"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal|top"
+
+        android:lineSpacingExtra="0sp"
+        android:text="@string/montreal"
+        android:textAppearance="@style/montreal"
+        android:translationY="-0.21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/some_id"
+        android:textAppearance="@style/some_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/montreal" />
+
+    <TextView
+        android:id="@+id/title_mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/mostly_title"
+        android:textColor="#99EBEBF5"
+        android:textSize="20sp"
+        android:translationY="-0.07sp"
+        app:layout_constraintEnd_toEndOf="@id/some_id"
+        app:layout_constraintStart_toStartOf="@id/some_id"
+        app:layout_constraintTop_toBottomOf="@id/some_id" />
+
+    <TextView
+        android:id="@+id/title_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/mostly_int"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:translationY="-0.07sp"
+        app:layout_constraintEnd_toEndOf="@id/title_mini"
+        app:layout_constraintStart_toStartOf="@id/title_mini"
+        app:layout_constraintTop_toBottomOf="@id/title_mini" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="403dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="50dp"
+
+        app:layout_constraintTop_toBottomOf="@id/title_int">
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_blurRadius="1"
+            app:blk_fps="1" />
+
+        
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
