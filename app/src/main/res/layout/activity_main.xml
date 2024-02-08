@@ -1,90 +1,406 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
     android:background="@drawable/fon_bacg"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content">
 
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-    <TextView
-        android:id="@+id/montreal"
-        android:layout_width="129dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="100dp"
-        android:gravity="center_horizontal|top"
-
-        android:lineSpacingExtra="0sp"
-        android:text="@string/montreal"
-        android:textAppearance="@style/montreal"
-        android:translationY="-0.21sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/some_id"
-        android:textAppearance="@style/some_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/montreal" />
 
-    <TextView
-        android:id="@+id/title_mini"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:letterSpacing="0.02"
-        android:lineSpacingExtra="0sp"
-        android:text="@string/mostly_title"
-        android:textColor="#99EBEBF5"
-        android:textSize="20sp"
-        android:translationY="-0.07sp"
-        app:layout_constraintEnd_toEndOf="@id/some_id"
-        app:layout_constraintStart_toStartOf="@id/some_id"
-        app:layout_constraintTop_toBottomOf="@id/some_id" />
 
-    <TextView
-        android:id="@+id/title_int"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:letterSpacing="0.02"
-        android:lineSpacingExtra="0sp"
-        android:text="@string/mostly_int"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:translationY="-0.07sp"
-        app:layout_constraintEnd_toEndOf="@id/title_mini"
-        app:layout_constraintStart_toStartOf="@id/title_mini"
-        app:layout_constraintTop_toBottomOf="@id/title_mini" />
+        tools:context=".MainActivity">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="403dp"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="50dp"
+        <View
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/svg"
+            app:layout_constraintBottom_toTopOf="@id/montreal"
+            app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@id/title_int">
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="-25dp"
+            android:background="@drawable/svg"
+            app:layout_constraintBottom_toBottomOf="@id/title_mini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_mini" />
+
+        <View
+
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="-35dp"
+            android:background="@drawable/svg"
+            app:layout_constraintBottom_toBottomOf="@id/title_mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_mini" />
+
+        <TextView
+            android:id="@+id/montreal"
+
+            android:layout_width="129dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal|top"
+
+            android:lineSpacingExtra="0sp"
+            android:text="@string/montreal"
+            android:textAppearance="@style/montreal"
+            android:translationY="-0.21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/some_id"
+            android:textAppearance="@style/some_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/montreal" />
+
+        <TextView
+            android:id="@+id/title_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/mostly_title"
+            android:textColor="#99EBEBF5"
+            android:textSize="20sp"
+            android:translationY="-0.07sp"
+            app:layout_constraintEnd_toEndOf="@id/some_id"
+            app:layout_constraintStart_toStartOf="@id/some_id"
+            app:layout_constraintTop_toBottomOf="@id/some_id" />
+
+
 
         <io.alterac.blurkit.BlurLayout
             android:id="@+id/blur"
+            app:blk_cornerRadius="50dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginTop="20dp"
             app:blk_blurRadius="1"
-            app:blk_fps="1" />
 
-        
+            app:blk_fps="0"
+            app:layout_constraintTop_toBottomOf="@id/title_mini">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
 
-    </com.google.android.material.card.MaterialCardView>
+
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@drawable/corner_gr"
+
+                    />
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="111dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="top"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/hourly_forecast"
+                    android:textColor="@color/white"
+                    android:translationY="-1.05sp" />
+
+                <TextView
+                    android:id="@+id/we"
+                    android:layout_width="115dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/weekly_forecast"
+                    android:textColor="@color/white"
+                    android:translationY="-1.05sp" />
+
+                <View
+                    android:layout_width="56dp"
+                    android:layout_height="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="#4D000082" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/label"
+                    android:layout_marginTop="12dp"
+                    android:background="#A9A7AB" />
+
+                <LinearLayout
+                    android:id="@+id/weather"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/component"
+                        android:layout_width="60dp"
+                        android:layout_height="146dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/moona"
+                        android:elevation="10dp">
+
+                        <TextView
+                            android:id="@+id/am12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:text="12 AM"
+                            android:textColor="@color/white"
+
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/am12"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/moon_water" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image"
+                            android:gravity="center"
+                            android:text="30 %"
+                            android:textColor="#40CBD8"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:text="19°"
+                            android:textColor="@color/white" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/components"
+                        android:layout_width="60dp"
+                        android:layout_height="146dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/moonaa"
+                        android:elevation="10dp">
+
+                        <TextView
+                            android:id="@+id/am121"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            android:text="NOW"
+                            android:textColor="@color/white"
+
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/am121"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/moon_water" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:text="19°"
+                            android:textColor="@color/white" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+
+                        style="@style/MyRelativeLayoutStyle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyTextViewStyle"
+                            android:text="2 AM" />
+
+                        <ImageView
+                            style="@style/MyImageViewStyle"
+                            android:layout_marginTop="16dp"
+
+                            android:src="@drawable/moon" />
+
+                        <TextView
+                            style="@style/MyTextViewStyle2"
+                            android:layout_marginTop="30dp"
+                            android:text="18°" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        style="@style/MyRelativeLayoutStyle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyTextViewStyle"
+                            android:text="3 AM" />
+
+                        <ImageView
+                            style="@style/MyImageViewStyle"
+                            android:layout_marginTop="16dp"
+
+                            android:src="@drawable/moon" />
+
+                        <TextView
+                            style="@style/MyTextViewStyle2"
+                            android:layout_marginTop="30dp"
+                            android:text="19°" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        style="@style/MyRelativeLayoutStyle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyTextViewStyle"
+                            android:text="4 AM" />
+
+                        <ImageView
+                            style="@style/MyImageViewStyle"
+                            android:layout_marginTop="16dp"
+
+                            android:src="@drawable/moon" />
+
+                        <TextView
+                            style="@style/MyTextViewStyle2"
+                            android:layout_marginTop="30dp"
+                            android:text="19°" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        style="@style/MyRelativeLayoutStyle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyTextViewStyle"
+                            android:text="5 AM" />
+
+                        <ImageView
+                            style="@style/MyImageViewStyle"
+                            android:layout_marginTop="16dp"
+
+                            android:src="@drawable/moon" />
+
+                        <TextView
+                            style="@style/MyTextViewStyle2"
+                            android:layout_marginTop="30dp"
+                            android:text="19°" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/ellipse_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/weather"
+                    android:background="@drawable/ellipise" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_menu" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/ic_plus" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_list" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </io.alterac.blurkit.BlurLayout>
+
+        <Button
+            android:id="@+id/next"
+            style="@style/Widget.Material3.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginEnd="50dp"
+            android:text="Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blur" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -4,4 +4,7 @@
     <string name="some_id">19\u00b0</string>
     <string name="mostly_title">Mostly Clear</string>
     <string name="mostly_int">H:24\u00b0   L:18\u00b0</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="weekly_forecast">Weekly Forecast</string>
+    <string name="title">"19°| Mostly Clear "</string>
 </resources>

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.ikpydev.weatherapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ikpydev.weatherapp"
         minSdk 25
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -35,6 +35,8 @@ android {
 dependencies {
 
     implementation 'com.github.wonderkiln:blurkit-android:1.1.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

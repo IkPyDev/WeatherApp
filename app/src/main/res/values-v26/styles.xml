@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyRelativeLayoutStyle">
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">146dp</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:layout_marginVertical">16dp</item>
+        <item name="android:background">@drawable/moona</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+
+</resources>
